@@ -2,7 +2,7 @@
       , Image = Canvas.Image
       , qrcode = require('jsqrcode')(Canvas);
 
-    var filename = __dirname + '/test123.jpg';
+    var filename = __dirname + '/test-small.jpg';
 
     var image = new Image();
     image.onload = function(){
