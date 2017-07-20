@@ -7,5 +7,4 @@ function decodeImage(imagePath) {
   return new Buffer(imageData, 'base64');
 }
 
-
 console.log(imageData.toString('base64'));

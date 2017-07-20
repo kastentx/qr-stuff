@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "base64image": "^0.1.1",
-    "fs": "0.0.1-security"
+    "canvas": "^1.6.5",
+    "fs": "0.0.1-security",
+    "jsqr": "^0.2.2"
   }
 }
