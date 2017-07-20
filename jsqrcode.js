@@ -1,10 +1,10 @@
     var Canvas = require('canvas')
       , Image = Canvas.Image
-      , qrcode = require('jsqrcode')(Canvas)
+      , qrcode = require('jsqrcode')(Canvas);
 
-    var filename = __dirname + '/testImage.jpeg'
+    var filename = __dirname + '/test123.jpg';
 
-    var image = new Image()
+    var image = new Image();
     image.onload = function(){
       var result;
       try{
@@ -14,4 +14,4 @@
         console.log('unable to read qr code');
       }
     }
-    image.src = filename
+    image.src = filename;
