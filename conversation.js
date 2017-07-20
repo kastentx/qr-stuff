@@ -24,7 +24,7 @@ var credentials = config.credentials;
 var WORKSPACEID = config.conversationWorkspaceId;
 
 // these are the hardware capabilities that TJ needs for this recipe
-var hardware = ['microphone', 'speaker'];
+var hardware = ['microphone', 'speaker', 'servo', 'led'];
 
 // set up TJBot's configuration
 var tjConfig = {
@@ -51,7 +51,23 @@ tj.listen(function(msg) {
         // send to the conversation service
         tj.converse(WORKSPACEID, turn, function(response) {
             // speak the result
+	    if (response.object.output.action) {
+		console.log('performing action...');
+		if (response.object.output.action == 'armUp') {
+		    raiseArm();		    
+		}
+	    }
             tj.speak(response.description);
+	    
         });
     }
 });
+
+
+
+
+
+function raiseArm() {
+  console.log('im raising my arm');
+  tj.wave();
+}
