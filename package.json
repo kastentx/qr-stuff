@@ -12,6 +12,7 @@
     "base64image": "^0.1.1",
     "canvas": "^1.6.5",
     "fs": "0.0.1-security",
-    "jsqr": "^0.2.2"
+    "jsqr": "^0.2.2",
+    "jsqrcode": "0.0.7"
   }
 }

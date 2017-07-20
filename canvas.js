@@ -16,10 +16,10 @@ var imageData = ctx.getImageData(0, 0, 640, 480);
 console.log(imageData.data.length);
 console.log(640 * 480 * 4);
 
-//var binarizedImage = jsQR.binarizeImage(imageData, 640, 480);
-//var location = jsQR.locateQRInBinaryImage(binarizedImage);
-//if (!location) {
-//  console.log('no qr code found in image');
-//} else {
-//    console.log(location);
-//}
+var binarizedImage = jsQR.binarizeImage(imageData, 640, 480);
+var location = jsQR.locateQRInBinaryImage(binarizedImage);
+if (!location) {
+  console.log('no qr code found in image');
+} else {
+    console.log(location);
+}
